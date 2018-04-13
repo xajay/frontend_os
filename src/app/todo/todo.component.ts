@@ -49,12 +49,12 @@ export class TodoComponent implements OnInit {
             data => {
                 this.lastRequestResult = (data == 'true');
                 this.todoWithSpecifiedNameAlreadyExists = !this.lastRequestResult;
+                this.nameToAddInput = '';
             },
             err => this.logError(err),
             () => {
                 this.getAllTodos();
-                console.log('add request result: ' + this.lastRequestResult);
-                this.nameToAddInput = '';
+                console.log('add request result: ' + this.lastRequestResult);               
             }
             );
     }
