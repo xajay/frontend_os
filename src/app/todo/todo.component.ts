@@ -54,6 +54,7 @@ export class TodoComponent implements OnInit {
             () => {
                 this.getAllTodos();
                 console.log('add request result: ' + this.lastRequestResult);
+                this.nameToAddInput = '';
             }
             );
     }
