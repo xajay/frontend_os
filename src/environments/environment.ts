@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://todolist-jenkins-tester.b9ad.pro-us-east-1.openshiftapps.com'
+  apiUrl: 'apiUrl: 'http://localhost:9090'
 };
