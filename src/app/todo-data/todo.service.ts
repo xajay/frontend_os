@@ -5,13 +5,16 @@ import { Todo } from './todo';
 import 'rxjs/add/operator/map';
 import { $ } from 'protractor';
 import { resetFakeAsyncZone } from '@angular/core/testing';
+import { environment } from '../environments/environment';
+
+const API_URL = environment.apiUrl;
 
 @Injectable()
 export class TodoService {
-    private getAllUrl = 'http://localhost:8080/todo';
-    private addUrl = 'http://localhost:8080/new';
-    private editUrl = 'http://localhost:8080/edit';
-    private deleteUrl = 'http://localhost:8080/delete';
+    private getAllUrl = API_URL + '/todo';
+    private addUrl =    API_URL + '/new';
+    private editUrl = API_URL + '/edit';
+    private deleteUrl = API_URL + '/delete';
 
     constructor(private http: Http) {
 
